@@ -1,8 +1,12 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { headers } from "next/headers";
+import { cn } from "ui";
+import {TRPCReactProvider} from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
   title: "Create Turborepo",
@@ -15,8 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html className="light" lang="en">
+      <body className={cn(
+        'min-h-screen font-sans antialiased',
+        inter.className
+        )}>
+        <TRPCReactProvider headers={headers()}>
+          {children}
+        </TRPCReactProvider>
+      </body>
     </html>
   );
 }

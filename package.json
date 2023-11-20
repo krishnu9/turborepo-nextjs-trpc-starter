@@ -2,13 +2,16 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev",
+    "dev": "dotenv -- turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "db:push": "dotenv -- pnpm -F db push",
+    "db:studio": "pnpm -F db studio"
   },
   "devDependencies": {
     "eslint": "^8.48.0",
     "prettier": "^3.0.3",
+    "dotenv-cli": "latest",
     "tsconfig": "workspace:*",
     "turbo": "latest"
   },
