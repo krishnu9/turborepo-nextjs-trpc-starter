@@ -9,9 +9,10 @@
     "db:studio": "pnpm -F db studio"
   },
   "devDependencies": {
+    "@types/node": "^20.9.4",
+    "dotenv-cli": "latest",
     "eslint": "^8.48.0",
     "prettier": "^3.0.3",
-    "dotenv-cli": "latest",
     "tsconfig": "workspace:*",
     "turbo": "latest"
   },
