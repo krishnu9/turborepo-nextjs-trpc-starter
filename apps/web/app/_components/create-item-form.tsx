@@ -29,7 +29,7 @@ export function CreateItemForm(): React.ReactElement {
               setTitle(e.target.value);
             }}
           />
-            <Button className="mx-2" type="submit" variant="secondary">Create Item</Button>
+          <Button className="mx-2" type="submit" variant="secondary">Create Item</Button>
         </form>
       </div>
     );
