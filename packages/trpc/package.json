@@ -1,0 +1,30 @@
+{
+  "name": "@repo/trpc",
+  "version": "1.0.0",
+  "description": "trpc",
+  "main": "index.ts",
+  "types": "index.ts",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "author": "krishnu.binod@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@repo/db": "*",
+    "@trpc/client": "^10.45.0",
+    "@trpc/server": "^10.45.0",
+    "next": "^14.1.0",
+    "superjson": "^2.2.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3"
+  }
+}

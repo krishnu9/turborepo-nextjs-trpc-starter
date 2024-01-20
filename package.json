@@ -5,12 +5,15 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "db:push": "dotenv -- npx -w @repo/db prisma db push",
+    "db:studio": "dotenv -- npx -w @repo/db prisma studio --port 5556"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "prettier": "^3.1.1",
+    "dotenv-cli": "^7.3.0",
     "turbo": "latest"
   },
   "engines": {
@@ -20,5 +23,7 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+  }
 }

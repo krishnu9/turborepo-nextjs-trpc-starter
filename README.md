@@ -50,6 +50,11 @@ cd my-turborepo
 pnpm dev
 ```
 
+To Setup DB
+```
+docker run --name postgresql -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -v /data:/var/lib/postgresql/data  postgres -c log_statement=all
+```
+
 ### Remote Caching
 
 Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
@@ -79,3 +84,12 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+
+## ToDo
+-> Prisma
+-> tRPC
+-> See if Crud operations work
+-? NextAuth
+-> Environment variables
+-> Tailwind
+- ?ShadCn UI
