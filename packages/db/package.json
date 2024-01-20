@@ -5,9 +5,9 @@
   "types": "index.ts",
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
-    "generate": "npx prisma generate",
-    "push": "prisma db push --skip-generate",
-    "studio": "npx prisma studio --port 5556"
+    "db:generate": "npx prisma generate",
+    "db:push": "prisma db push --skip-generate",
+    "db:studio": "npx prisma studio --port 5556"
   },
   "keywords": [],
   "author": "",

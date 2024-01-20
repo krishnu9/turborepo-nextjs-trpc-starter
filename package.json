@@ -7,7 +7,8 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "db:push": "dotenv -- npx -w @repo/db prisma db push",
-    "db:studio": "dotenv -- npx -w @repo/db prisma studio --port 5556"
+    "db:studio": "dotenv -- npx -w @repo/db prisma studio --port 5556",
+    "prod": "dotenv -v NODE_ENV=production turbo build"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
