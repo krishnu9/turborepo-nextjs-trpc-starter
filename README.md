@@ -93,5 +93,8 @@ Learn more about the power of Turborepo:
 -> Environment variables
 -? tRPC client error 
     - queries not running anymore - Runing on local
+    - fix NextAuth
 -? NextAuth - not tested yet
--x ShadCn UI
+    - [next-auth][error][NO_SECRET] 
+    https://next-auth.js.org/errors#no_secret Please define a `secret` in production. r [MissingSecretError]: Please define a `secret` in production.
+-x ShadCn UIs
