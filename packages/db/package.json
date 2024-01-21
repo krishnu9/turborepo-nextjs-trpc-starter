@@ -7,13 +7,14 @@
     "clean": "rm -rf .turbo node_modules",
     "db:generate": "npx prisma generate",
     "db:push": "prisma db push --skip-generate",
-    "db:studio": "npx prisma studio --port 5556"
+    "dev": "dotenv -e ../../.env -- prisma studio --port 5556"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.8.1",
+    "dotenv-cli": "^7.3.0",
     "prisma": "^5.8.1"
   },
   "devDependencies": {

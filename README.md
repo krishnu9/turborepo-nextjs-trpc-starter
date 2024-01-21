@@ -89,7 +89,9 @@ Learn more about the power of Turborepo:
 -> Prisma
 -> tRPC
 -> See if Crud operations work
--? NextAuth
--> Environment variables
 -> Tailwind
-- ?ShadCn UI
+-> Environment variables
+-? tRPC client error 
+    - queries not running anymore - Runing on local
+-? NextAuth - not tested yet
+-x ShadCn UI

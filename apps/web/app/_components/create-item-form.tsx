@@ -9,22 +9,27 @@ export function CreateItemForm() {
     const createItem = trpc.item.create.useMutation();
     return (
         <div>
-            <input
-                type="text"
-                value={name}
+         <form 
+            onSubmit={async (e) => {
+                e.preventDefault();
+                await createItem.mutateAsync({ 
+                    name,
+                    description: "test",
+                    price: 100,
+                 });
+                setName("");
+            }}
+         >
+            <input 
+                type="text" 
+                value={name} 
                 onChange={(e) => setName(e.target.value)}
+                className="border text-gray-900 border-gray-300 rounded-md p-2 mx-2"
             />
-            <button
-                onClick={() => {
-                    createItem.mutate({
-                        name: name,
-                        price: 100,
-                        description: "test",
-                    });
-                }}
-            >
-                Create item
+            <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md">
+                Create
             </button>
+         </form>
         </div>
     )
 }
