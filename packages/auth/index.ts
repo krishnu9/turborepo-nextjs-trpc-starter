@@ -1,4 +1,4 @@
-import { getServerSession, type DefaultSession, type NextAuthOptions } from "next-auth";
+import NextAuth, { getServerSession, type DefaultSession, type NextAuthOptions } from "next-auth";
 import DiscordProvider from "next-auth/providers/discord";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { prisma } from "@repo/db";
@@ -32,7 +32,6 @@ export const authOptions: NextAuthOptions = {
 }
 
 export type { Session } from "next-auth";
-
-// export const handlers = NextAuth(authOptions);
 export const getServerAuthSession = () => getServerSession(authOptions);
+export const { handlers, auth, signIn, signOut } = NextAuth(authOptions);
 
